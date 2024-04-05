@@ -20,9 +20,7 @@ public class Main {
     }
 
     private static void printAllContacts() throws JsonProcessingException {
-        ObjectWriter ow = new ObjectMapper()
-                .setDateFormat(new SimpleDateFormat("yyyy-MM-dd"))
-                .writer().withDefaultPrettyPrinter();
+        ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
 
         Contact[] contacts = ContactRepository.getAllContacts();
 
